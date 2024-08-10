@@ -136,7 +136,7 @@ p {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: inherit;        
+    height: 100%;        
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -178,6 +178,7 @@ video {
     height: 100vh;
     }
     .shade {
+        padding-bottom: 0;
         flex-direction: row-reverse;
     }
     .container1 {
