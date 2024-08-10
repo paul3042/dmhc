@@ -141,7 +141,6 @@ p {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding-bottom: 1.6rem;
     padding-top: 5.6rem;
 }
 
@@ -178,7 +177,6 @@ video {
     height: 100vh;
     }
     .shade {
-        padding-bottom: 0;
         flex-direction: row-reverse;
     }
     .container1 {
