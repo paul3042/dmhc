@@ -1,0 +1,490 @@
+/* Site Stylesheet
+  1. Global
+  2. Typography
+  3. Colour
+  4. Layout
+  5. Components
+======================================== */
+
+/* 1. Global
+======================================== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+#about, #testimonials, #mentors {
+    scroll-margin-top: 5.6rem;
+}
+
+#about, #testimonials { 
+    margin: 5.6rem 0;
+}
+
+.desktop {
+    display: none;
+}
+
+@media only screen and (orientation: landscape) and (min-width: 800px) {
+    .desktop {
+        display: block;
+    }
+    #about, #testimonials {
+        scroll-margin-top: 11.1rem;
+    }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 800px) and (min-height: 500px) {
+    #about, #testimonials {
+        margin: 11.2rem 0;
+        scroll-margin-top: 16.7rem;
+    } 
+}
+
+/* 2. Typography
+======================================== */
+h1, h2, h3, nav a, .demand, .button {
+    font-family: 'Unica One', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h2, h3, nav a, .demand, .button {
+    padding: 0.8rem 0 0.8rem 0;
+
+}
+
+nav a, .demand {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3, nav a, .button, blockquote {
+    font-size: 2rem;
+}
+
+p, blockquote {
+    font-family: 'Crimson Text', 'Times New Roman', Times, serif;
+    padding: 0.8rem 0 0.8rem 0;
+}
+
+p, input {    
+    font-size: inherit;
+    line-height: 1.5;
+}
+
+nav a, .button {
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+}
+
+.button {
+    font-weight: bold;
+}
+
+.shade h1, .shade h2, #mentors h2, #mentors h3, footer h3, footer p {
+    color: white;
+    text-shadow: 2px 2px 2px black ;
+}
+
+blockquote {
+    line-height: 1.5;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 700px), (orientation: landscape) and (min-height: 700px) {
+    h1 {
+        font-size: 10rem;
+    }
+    h2 {
+        font-size: 5rem;
+    }
+    h3, .shade .button {
+        font-size: 2.8rem;
+    }
+    p, nav a, .button, input {
+        font-size: 2rem;
+    }
+    blockquote {
+        font-size: 2.4rem;
+    }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 2000px) {
+    h1 {
+        font-size: 16rem;
+    }
+    h2 {
+        font-size: 7rem;
+
+    }
+    h3 {
+        font-size: 5.6;
+    }
+    p, input, .shade .button {
+        font-size: 4rem;
+    }
+    blockquote {
+        font-size: 4.8rem;
+    }
+}
+
+
+/* 3. Colour
+======================================== */
+header {
+    background-color: hsla(0, 0%, 100%, 0.75);
+}
+
+.shade {      
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+#mentors {
+    background-color: rgb(128, 65, 64);
+}
+
+footer {
+    background-color: rgb(64, 101, 128);
+}
+
+@media only screen and (orientation: landscape) and (min-height: 500px) and (min-width: 600px) {
+    .shade {  
+        background: linear-gradient(to right,  rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    }
+}
+
+
+/* 4. Layout
+======================================== */
+/*Navbar*/
+header {
+    position: fixed;
+    width: 100%;
+    height: 5.6rem;
+    z-index: 100;
+}
+
+.logo {
+    position: absolute;
+    height: 11.2rem;
+    float: left;
+    transition: height, 1.5s;
+}
+
+nav ul {
+    height: 5.6rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+@media only screen and (max-width: 520px) {
+    .navbar {
+        display: none;
+    }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 800px) {
+     header ul {
+        padding-right: 2rem;
+    }
+    .navbar {
+        padding-right: 8rem;
+    }
+    .logo:hover {
+        height: 700%;
+        cursor: pointer;
+    }
+}
+
+
+/*Hero*/
+#hero {
+    background-image: url(./Media/hero-mob.JPG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.shade {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;        
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1.6rem;           
+}
+
+.shade ul {
+    padding: 1.6rem 0 2.4rem 0;
+}
+
+.shade li {
+    display: inline-block;
+}
+
+.action+.action {
+    padding-left: 1.6rem;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 500px) {
+    .shade  {
+        padding-bottom: 5vw;
+    }
+    .shade h2 {
+        padding: 2rem 0 2.5rem 0;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    #hero {
+    background-image: url(./Media/hero-desk.JPG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    }
+    .shade {
+        padding-bottom: 0;
+    }
+}
+
+@media only screen and (orientation: landscape) and (min-height: 500px) and (min-width: 600px) {
+    .shade {
+        width: 50%;
+        height: 100%;        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 3.2rem;
+    }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 800px) {
+    .shade h2 {
+        padding: 2rem 0 2.5rem 0;
+    }
+    .action+.action {
+        padding-left: 5rem; 
+    }
+}
+
+
+/*About, Testimonials*/
+#about {
+    background-image: url(./Media/club-desk.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+#testimonials {
+    background-image: url(./Media/nerd-desk.JPG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100;
+    height: 100vh;
+}
+
+#about, #testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.6rem;
+    width: 100%;
+}
+
+.box-right {
+    align-items: flex-start;
+}
+
+.box-left {
+    align-items: flex-end;
+}
+
+.box-right h2, .box-right p {
+    text-align: left;
+}
+
+.box-left h2, .box-left p, .box-left blockquote {
+    text-align: right;
+}
+
+@media only screen and (orientation: landscape) and (min-width: 800px) {
+    #about, #testimonials {
+        background-image: none;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 2rem;
+        height: auto;
+    }
+    .container {
+        width: 60%;
+    }
+    .container img {
+        width: 100%;
+    }
+    .box {
+        width: 40%;
+    }
+}
+
+/*Mentors*/
+#mentors {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#mentors .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mentor-pic {
+   text-align: center;
+}
+
+#mentors img {
+    width: 95%;
+}
+
+#mentors h2 {
+    padding: 0.5em 0 0.75em 0;
+} 
+
+#mentors h3 {
+   padding: 0.5em 0 1.5em 0;
+}
+
+#mentors h2, #mentors h3 {
+    text-align: center;
+}
+
+@media only screen and (orientation: landscape) and (max-width: 799px) {
+    .card {
+        height: 75vh;
+        width: auto;
+        overflow: hidden;
+    }
+    .mentor-pic {
+        height: 100%;
+        width: auto;
+        overflow: hidden;
+    }
+    #mentors img{
+        max-height: 100%;
+        width: auto;
+        display: block;
+    }
+}
+
+
+@media only screen and (orientation: landscape) and (min-width: 800px) { 
+    #mentors .wrapper {
+        flex-direction: row;
+        align-items: baseline;
+    }
+}
+
+
+/*Footer*/
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2.8rem;
+}
+
+@media only screen and (orientation: landscape) {
+    footer {
+        flex-direction: row ;
+    }
+}
+
+
+/* 5. Components
+======================================== */
+.button {
+    padding: 0.8rem 1.2rem;
+    background-color: hsla(205, 100%, 50%, 0.75);
+    border: 1px solid hsla(205, 100%, 50%, 1);
+    border-radius: 2.4rem;
+    transition: background-color, 0.5s;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: hsla(60, 100%, 50%, 0.75);
+    border: solid 1px hsla(60, 100%, 50%, 1);
+}
+
+.button1:hover {
+    background-color: hsla(205, 100%, 60%, 1);
+}
+
+.button2:hover {
+    background-color: hsla(60, 100%, 60%, 1);
+}
+
+input {
+    margin: 1.6rem 1.6rem 0 0;
+}
